@@ -10,6 +10,7 @@ function App() {
       <TabProvider>
         <Route path="/" component={Homepage} exact />
         <Route path="/chats" component={Chatpage} />
+        <Route path="/room/:roomId" component={Chatpage} />
       </TabProvider>
     </div>
   );
