@@ -9,7 +9,10 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("localhost:5000"), []);
+  const socket = useMemo(
+    () => io("https://convo-io-chatting-applicaion.onrender.com"),
+    []
+  );
 
   useEffect(() => {
     console.log("Socket initialized:", socket);
