@@ -1,12 +1,16 @@
 import React from "react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 
 const Welcome = () => {
   return (
-    <div>
-      <h1>Get Started !!</h1>
-      <br />
-      <h3>Enter the details and join the room!</h3>
-    </div>
+    <Box textAlign="center" position="relative">
+      <Heading as="h1" size="xl" mt={8}>
+        Get Started !!
+      </Heading>
+      <Text fontSize="xl" mt={4}>
+        Enter the details and join the room!
+      </Text>
+    </Box>
   );
 };
 

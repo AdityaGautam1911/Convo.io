@@ -28,21 +28,29 @@ function Homepage() {
         d="flex"
         justifyContent="center"
         p={3}
-        bg="white"
+        bg="#282828"
         w="100%"
         m="40px 0 15px 0"
         borderRadius="lg"
         borderWidth="1px"
+        color="white"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
           Convo.io
         </Text>
       </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+      <Box
+        bg="#282828"
+        w="100%"
+        p={4}
+        borderRadius="lg"
+        borderWidth="1px"
+        color="white"
+      >
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
-            <Tab>Login</Tab>
-            <Tab>Sign Up</Tab>
+            <Tab bg="#ae8fd8">Login</Tab>
+            <Tab bg="#ae8fd8">Sign Up</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

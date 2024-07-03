@@ -134,6 +134,7 @@ const Signup = () => {
       <FormControl id="first-name" isRequired>
         <FormLabel>Name</FormLabel>
         <Input
+          bg="#383043"
           placeholder="Enter Your Name"
           onChange={(e) => setName(e.target.value)}
         />
@@ -141,6 +142,7 @@ const Signup = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
+          bg="#383043"
           type="email"
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
@@ -150,12 +152,13 @@ const Signup = () => {
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
+            bg="#383043"
             type={show ? "text" : "password"}
             placeholder="Enter Password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button bg="#ae8fd8" h="1.75rem" size="sm" onClick={handleClick}>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -165,12 +168,13 @@ const Signup = () => {
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup size="md">
           <Input
+            bg="#383043"
             type={show ? "text" : "password"}
             placeholder="Confirm password"
             onChange={(e) => setConfirmpassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button bg="#ae8fd8" h="1.75rem" size="sm" onClick={handleClick}>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -179,6 +183,7 @@ const Signup = () => {
       <FormControl id="pic">
         <FormLabel>Upload your Picture</FormLabel>
         <Input
+          bg="#383043"
           type="file"
           p={1.5}
           accept="image/*"
@@ -191,6 +196,7 @@ const Signup = () => {
         style={{ marginTop: 15 }}
         onClick={submitHandler}
         isLoading={picLoading}
+        bg="#ae8fd8"
       >
         Sign Up
       </Button>

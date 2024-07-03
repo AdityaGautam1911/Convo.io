@@ -56,10 +56,11 @@ const MyChats = ({ fetchAgain }) => {
       flexDir="column"
       alignItems="center"
       p={3}
-      bg="white"
+      bg="#231b2f"
       w={{ base: "100%", md: "31%" }}
       borderRadius="lg"
       borderWidth="1px"
+      color="white"
     >
       <Tabs
         isFitted
@@ -81,12 +82,15 @@ const MyChats = ({ fetchAgain }) => {
               pb={3}
               px={3}
               fontSize={{ base: "28px", md: "30px" }}
-              fontFamily="Work sans"
+              fontFamily="Work Sans"
               d="flex"
               w="100%"
               justifyContent="space-between"
               alignItems="center"
-              bg="white"
+              bg="#383043"
+              color="white"
+              borderTopRadius="lg"
+              padding="5px"
             >
               My Chats
               <GroupChatModal>
@@ -94,6 +98,7 @@ const MyChats = ({ fetchAgain }) => {
                   d="flex"
                   fontSize={{ base: "17px", md: "10px", lg: "17px" }}
                   rightIcon={<AddIcon />}
+                  bg="#ae8fd8"
                 >
                   New Group Chat
                 </Button>
@@ -103,11 +108,12 @@ const MyChats = ({ fetchAgain }) => {
               d="flex"
               flexDir="column"
               p={3}
-              bg="#F8F8F8"
+              bg="#383043"
               w="100%"
               h="100%"
               borderRadius="lg"
               overflowY="hidden"
+              borderTopRadius="none" // This will make the top corners non-rounded
             >
               {chats ? (
                 <Stack overflowY="scroll">
@@ -115,8 +121,9 @@ const MyChats = ({ fetchAgain }) => {
                     <Box
                       onClick={() => setSelectedChat(chat)}
                       cursor="pointer"
-                      bg={selectedChat === chat ? "#38B2AC" : "#E8E8E8"}
-                      color={selectedChat === chat ? "white" : "black"}
+                      bg={selectedChat === chat ? "#231b2f" : "#655e6e"}
+                      // color={selectedChat === chat ? "white" : "black"}
+                      color="white"
                       px={3}
                       py={2}
                       borderRadius="lg"
@@ -145,7 +152,6 @@ const MyChats = ({ fetchAgain }) => {
             </Box>
           </TabPanel>
           <TabPanel pb={0} px={0}>
-            This is the video call tabs
             <Lobby />
           </TabPanel>
         </TabPanels>

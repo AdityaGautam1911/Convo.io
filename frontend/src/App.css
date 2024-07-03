@@ -3,9 +3,11 @@
 .App {
   min-height: 100vh;
   display: flex;
-  background-image: url("./bg.png");
+  background-image: url("./bgpurple.jpg");
   background-position: center;
   background-size: cover;
+  color: #000000;
+  /* text color */
 }
 
 ::-webkit-scrollbar {

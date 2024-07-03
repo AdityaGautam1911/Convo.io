@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/layout";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import "./styles.css";
+// import "./styles.css";
 import SingleChat from "./SingleChat";
 import { ChatState } from "../Context/ChatProvider";
 import { useTab } from "../Context/TabContext";
@@ -17,10 +17,11 @@ const Chatbox = ({ fetchAgain, setFetchAgain }) => {
       alignItems="center"
       flexDir="column"
       p={3}
-      bg="white"
+      bg="#231b2f"
       w={{ base: "100%", md: "68%" }}
       borderRadius="lg"
       borderWidth="1px"
+      color="white"
     >
       {tabIndex === 0 && (
         <SingleChat fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
