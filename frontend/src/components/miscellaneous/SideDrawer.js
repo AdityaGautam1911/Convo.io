@@ -31,7 +31,6 @@ import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
-import ToggleColorMode from "../../ToogleColorMode";
 
 function SideDrawer() {
   const [search, setSearch] = useState("");
