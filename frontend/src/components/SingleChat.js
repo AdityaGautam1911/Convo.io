@@ -2,7 +2,7 @@ import { FormControl } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import "./styles.css";
-import { IconButton, Spinner, useToast } from "@chakra-ui/react";
+import { IconButton, Spinner, Tooltip, useToast } from "@chakra-ui/react";
 import { getSender, getSenderFull } from "../config/ChatLogics";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -11,11 +11,12 @@ import ProfileModal from "./miscellaneous/ProfileModal";
 import ScrollableChat from "./ScrollableChat";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
-import { ArrowRightIcon } from "@chakra-ui/icons";
-
+import { ArrowRightIcon, LinkIcon } from "@chakra-ui/icons";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
+import backgroundImage from "../blackbg.jpg";
+
 const ENDPOINT = "https://convo-io-chatting-applicaion.onrender.com";
 let socket, selectedChatCompare;
 
@@ -125,7 +126,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   }, [selectedChat]);
 
   useEffect(() => {
-    socket.on("message received", (newMessageReceived) => {
+    socket.on("message recieved", (newMessageReceived) => {
       if (
         !selectedChatCompare || // if chat is not selected or doesn't match current chat
         selectedChatCompare._id !== newMessageReceived.chat._id
@@ -182,6 +183,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             alignItems="center"
           >
             <IconButton
+              bg="#d9b99b"
+              boxSize={10}
               d={{ base: "flex", md: "none" }}
               icon={<ArrowBackIcon />}
               onClick={() => setSelectedChat("")}
@@ -210,11 +213,14 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             flexDir="column"
             justifyContent="flex-end"
             p={3}
-            bg="#E8E8E8"
             w="100%"
             h="100%"
             borderRadius="lg"
             overflowY="hidden"
+            backgroundImage={`url(${backgroundImage})`}
+            backgroundPosition="center"
+            backgroundSize="cover"
+            backgroundRepeat="no-repeat"
           >
             {loading ? (
               <Spinner
@@ -248,31 +254,62 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               ) : null}
               <Input
                 variant="filled"
-                bg="#E0E0E0"
+                bg="black"
                 placeholder="Enter a message.."
                 value={newMessage}
                 onChange={typingHandler}
-                onKeyPress={handleKeyPress} // Handle Enter key press
+                onKeyPress={handleKeyPress}
                 mr={2}
                 borderRadius="5px"
+                borderColor="#faf0e6" // Add border color here
               />
-              <button
-                onClick={sendMessage}
-                style={{
-                  padding: "8px 12px", // Increased padding on left and right sides
-                  border: "none",
-                  background: "#E0E0E0",
-                  borderRadius: "5px",
-                }}
-              >
-                <ArrowRightIcon boxSize={4} />
-              </button>
+
+              <div style={{ display: "flex", gap: "10px" }}>
+                {" "}
+                {/* Adjust gap as needed */}
+                <Tooltip label="Attach Document">
+                  <button
+                    onClick={sendMessage}
+                    style={{
+                      padding: "8px 12px", // Increased padding on left and right sides
+                      border: "none",
+                      background: "#d9b99b",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    <LinkIcon boxSize={4} />
+                  </button>
+                </Tooltip>
+                <Tooltip label="Send Message">
+                  <button
+                    onClick={sendMessage}
+                    style={{
+                      padding: "8px 12px", // Increased padding on left and right sides
+                      border: "none",
+                      background: "#d9b99b",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    <ArrowRightIcon boxSize={4} />
+                  </button>
+                </Tooltip>
+              </div>
             </FormControl>
           </Box>
         </>
       ) : (
-        <Box d="flex" alignItems="center" justifyContent="center" h="100%">
-          <Text fontSize="3xl" pb={3} fontFamily="Work sans">
+        <Box
+          backgroundImage={`url(${backgroundImage})`}
+          backgroundSize="cover"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          d="flex"
+          alignItems="center"
+          justifyContent="center"
+          h="100%"
+          w="100%"
+        >
+          <Text fontSize="3xl" pb={3} fontFamily="Work sans" color="white">
             Click on a user to start chatting
           </Text>
         </Box>

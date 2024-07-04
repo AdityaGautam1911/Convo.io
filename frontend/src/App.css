@@ -4,10 +4,19 @@
   min-height: 100vh;
   display: flex;
   background-image: url("./bgpurple.jpg");
+  /* background-color: #000000; */
+  /* background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 90, 121, 1) 0%, rgba(0, 212, 255, 1) 100%); */
   background-position: center;
   background-size: cover;
   color: #000000;
   /* text color */
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 ::-webkit-scrollbar {

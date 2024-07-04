@@ -130,19 +130,20 @@ function SideDrawer() {
         alignItems="center"
         bg="transparent"
         w="100%"
-        p="5px 10px 0px 10px"
+        p="0px 10px 0px 10px"
       >
         <Box
           d="flex"
           justifyContent="space-between"
           alignItems="center"
-          bg="#231b2f"
+          bg="	#d9b99b"
           w="100%"
           p="0"
           m="5px"
           borderRadius="lg"
           color="white"
           borderWidth="1px"
+          borderColor="#54235b"
         >
           <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
             <Button variant="ghost" onClick={onOpen}>
@@ -152,10 +153,15 @@ function SideDrawer() {
               </Text>
             </Button>
           </Tooltip>
-          <Text fontSize="2xl" fontFamily="Work sans">
+          <Text
+            fontSize="4xl"
+            fontFamily="Work sans"
+            color="white"
+            fontWeight="bold"
+          >
             Convo.io
           </Text>
-          {/* <ToggleColorMode /> */}
+
           <div>
             <Menu>
               <MenuButton p={1}>
@@ -185,8 +191,8 @@ function SideDrawer() {
             <Menu>
               <MenuButton
                 as={Button}
-                bg="white"
-                rightIcon={<ChevronDownIcon />}
+                bg="transparent"
+                rightIcon={<ChevronDownIcon color="white" boxSize={7} />}
                 margin="4px"
                 color="black"
               >
@@ -197,7 +203,7 @@ function SideDrawer() {
                   src={user.pic}
                 />
               </MenuButton>
-              <MenuList style={{ backgroundColor: "#ae8fd8" }}>
+              <MenuList style={{ backgroundColor: "#d9b99b" }}>
                 <ProfileModal user={user}>
                   <MenuItem>My Profile</MenuItem>{" "}
                 </ProfileModal>
