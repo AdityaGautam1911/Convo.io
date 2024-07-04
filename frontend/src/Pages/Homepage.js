@@ -28,7 +28,7 @@ function Homepage() {
         d="flex"
         justifyContent="center"
         p={3}
-        bg="#282828"
+        bg="linear-gradient(42deg, rgba(0,0,0,1) 0%, rgba(190,190,190,1) 100%)"
         w="100%"
         m="40px 0 15px 0"
         borderRadius="lg"
@@ -40,17 +40,25 @@ function Homepage() {
         </Text>
       </Box>
       <Box
-        bg="#282828"
+        bg="linear-gradient(61deg, rgba(0,0,0,1) 0%, rgba(190,190,190,1) 100%)"
         w="100%"
         p={4}
         borderRadius="lg"
         borderWidth="1px"
         color="white"
       >
-        <Tabs isFitted variant="soft-rounded">
+        <Tabs
+          isFitted
+          variant="custom-variant" // Use the custom variant here
+          colorScheme="customColorScheme"
+        >
           <TabList mb="1em">
-            <Tab bg="#ae8fd8">Login</Tab>
-            <Tab bg="#ae8fd8">Sign Up</Tab>
+            <Tab bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)">
+              Login
+            </Tab>
+            <Tab bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)">
+              Sign Up
+            </Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

@@ -42,7 +42,13 @@ const Lobby = () => {
   }, [socket, handleJoinRoom]);
 
   return (
-    <Box p={4} bg="white" color="black" borderRadius="5px">
+    <Box
+      p={4}
+      bg="linear-gradient(184deg, rgba(188,188,188,1) 0%, rgba(217,185,155,1) 100%)"
+      color="black"
+      borderRadius="5px"
+      textAlign="center"
+    >
       <Heading as="h1" mb={4}>
         Lobby
       </Heading>
@@ -69,7 +75,13 @@ const Lobby = () => {
             placeholder="Enter room number"
           />
         </FormControl>
-        <Button type="submit" bg="#887d69">
+        <Button
+          type="submit"
+          bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)"
+          margin="auto"
+          display="block"
+          width="100%"
+        >
           Join
         </Button>
       </form>

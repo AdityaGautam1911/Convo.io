@@ -169,7 +169,11 @@ const Room = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            bg={!myStream ? "#d9b99b" : "transparent"}
+            bg={
+              !myStream
+                ? "linear-gradient(25deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)"
+                : "transparent"
+            }
           >
             {myStream ? (
               <ReactPlayer
@@ -197,7 +201,11 @@ const Room = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            bg={!remoteStream ? "#d9b99b" : "transparent"}
+            bg={
+              !remoteStream
+                ? "linear-gradient(25deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)"
+                : "transparent"
+            }
           >
             {remoteStream ? (
               <ReactPlayer
@@ -229,7 +237,7 @@ const Room = () => {
           variant="solid"
           colorScheme="green"
         >
-          Call <PhoneIcon />
+          Call <PhoneIcon ml={2} />
         </Button>
       </Flex>
     </Box>

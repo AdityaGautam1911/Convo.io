@@ -136,7 +136,8 @@ function SideDrawer() {
           d="flex"
           justifyContent="space-between"
           alignItems="center"
-          bg="	#d9b99b"
+          // bg="	#d9b99b"
+          bg="linear-gradient(25deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)"
           w="100%"
           p="0"
           m="5px"
@@ -146,7 +147,7 @@ function SideDrawer() {
           borderColor="#54235b"
         >
           <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
-            <Button variant="ghost" onClick={onOpen}>
+            <Button variant="ghost" onClick={onOpen} bg="">
               <i className="fas fa-search"></i>
               <Text d={{ base: "none", md: "flex" }} px={4}>
                 Search User
@@ -171,10 +172,14 @@ function SideDrawer() {
                 />
                 <BellIcon fontSize="2xl" m={1} />
               </MenuButton>
-              <MenuList pl={2}>
+              <MenuList
+                pl={2}
+                sx={{ bg: "#80dbc9", _hover: { bg: "#954535" } }}
+              >
                 {!notification.length && "No New Messages"}
                 {notification.map((notif) => (
                   <MenuItem
+                    color="black"
                     key={notif._id}
                     onClick={() => {
                       setSelectedChat(notif.chat);
@@ -218,22 +223,34 @@ function SideDrawer() {
       <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Search Users</DrawerHeader>
-          <DrawerBody>
+          <DrawerHeader
+            bg="linear-gradient(25deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)"
+            borderBottomWidth="1px"
+          >
+            Search Users
+          </DrawerHeader>
+          <DrawerBody bg="linear-gradient(25deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)">
             <Box d="flex" pb={2}>
               <Input
+                bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)"
                 placeholder="Search by name or email"
                 mr={2}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <Button onClick={handleSearch}>Go</Button>
+              <Button
+                bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)"
+                onClick={handleSearch}
+              >
+                Go
+              </Button>
             </Box>
             {loading ? (
               <ChatLoading />
             ) : (
               searchResult?.map((user) => (
                 <UserListItem
+                  bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)"
                   key={user._id}
                   user={user}
                   handleFunction={() => accessChat(user._id)}
@@ -249,3 +266,5 @@ function SideDrawer() {
 }
 
 export default SideDrawer;
+
+//alisha,bob,rohan,tiya,kalp,aditya

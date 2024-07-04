@@ -273,7 +273,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                     style={{
                       padding: "8px 12px", // Increased padding on left and right sides
                       border: "none",
-                      background: "#d9b99b",
+                      background:
+                        "linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)",
                       borderRadius: "5px",
                     }}
                   >
@@ -286,7 +287,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                     style={{
                       padding: "8px 12px", // Increased padding on left and right sides
                       border: "none",
-                      background: "#d9b99b",
+                      background:
+                        "linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)",
                       borderRadius: "5px",
                     }}
                   >

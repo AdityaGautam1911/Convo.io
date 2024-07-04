@@ -75,7 +75,7 @@ const Login = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
-          bg="#383043"
+          bg="linear-gradient(61deg, rgba(0,0,0,1) 0%, rgba(190,190,190,1) 100%)"
           value={email}
           type="email"
           placeholder="Enter Your Email Address"
@@ -86,14 +86,19 @@ const Login = () => {
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
-            bg="#383043"
+            bg="linear-gradient(61deg, rgba(0,0,0,1) 0%, rgba(190,190,190,1) 100%)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
             placeholder="Enter password"
           />
           <InputRightElement width="4.5rem">
-            <Button bg="#ae8fd8" h="1.75rem" size="sm" onClick={handleClick}>
+            <Button
+              bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)"
+              h="1.75rem"
+              size="sm"
+              onClick={handleClick}
+            >
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -105,7 +110,7 @@ const Login = () => {
         style={{ marginTop: 15 }}
         onClick={submitHandler}
         isLoading={loading}
-        bg="#ae8fd8"
+        bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)"
       >
         Login
       </Button>

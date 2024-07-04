@@ -58,7 +58,8 @@ const MyChats = ({ fetchAgain }) => {
       borderWidth="1px"
       color="white"
       borderColor="#54235b"
-      bg="	#d9b99b"
+      // bg="	#d9b99b"
+      bg="linear-gradient(25deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)"
     >
       <Tabs
         isFitted
@@ -86,20 +87,27 @@ const MyChats = ({ fetchAgain }) => {
               w="100%"
               justifyContent="space-between"
               alignItems="center"
-              bg="#d9b99b"
+              // bg="#D2B48C"
+              bg="linear-gradient(25deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)"
               color="white"
               borderTopRadius="lg"
               padding="5px"
             >
-              <Text fontSize="2xl" fontFamily="Work sans" color="white">
+              <Text
+                fontSize="2xl"
+                fontFamily="Work sans"
+                color="white"
+                pl={4}
+                fontWeight="bold"
+              >
                 ALL CHATS
               </Text>
               <GroupChatModal>
                 <Button
                   d="flex"
-                  fontSize={{ base: "17px", md: "10px", lg: "17px" }}
+                  fontSize={{ base: "17px", md: "10px", lg: "12px" }}
                   rightIcon={<AddIcon />}
-                  bg="black"
+                  bg="linear-gradient(184deg, rgba(183,183,183,1) 0%, rgba(125,114,93,1) 100%)"
                   color="white"
                 >
                   New Group Chat
@@ -110,7 +118,8 @@ const MyChats = ({ fetchAgain }) => {
               d="flex"
               flexDir="column"
               p={1}
-              bg="#d9b99b"
+              // bg="#D2B48C"
+              bg="linear-gradient(83deg, rgba(77,77,77,1) 0%, rgba(217,185,155,1) 100%)"
               w="100%"
               h="100%"
               borderRadius="lg"
@@ -124,12 +133,16 @@ const MyChats = ({ fetchAgain }) => {
                       key={chat._id}
                       onClick={() => setSelectedChat(chat)}
                       cursor="pointer"
-                      bg={selectedChat === chat ? "#faf8f6" : "#faf0e6"}
+                      bg={
+                        selectedChat === chat
+                          ? "linear-gradient(184deg, rgba(237,237,232,1) 0%, rgba(255,255,255,1) 100%)"
+                          : "linear-gradient(6deg, rgba(183,183,183,1) 0%, rgba(250,240,230,1) 100%)"
+                      }
                       color={selectedChat === chat ? "black" : "black"}
                       px={3}
                       py={2}
                       borderRadius="lg"
-                      mb={2}
+                      // mb={2}
                     >
                       <Text>
                         {!chat.isGroupChat
