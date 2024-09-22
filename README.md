@@ -35,6 +35,14 @@ Follow these instructions to set up and run the project locally.
 ### Environment Variables
 
 Before starting the application, create a `.env` file in the `backend` directory and add the following variables:
+<br>
+PORT=5000
+
+MONGO_URI=your_mongo_db_url
+
+JWT_SECRET=your_jwt_secret
+NODE_ENV=production 
+# change it to "development" if not in production
 
 
 ### Running the Application
