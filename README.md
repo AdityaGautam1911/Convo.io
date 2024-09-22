@@ -1,8 +1,6 @@
-# Project Name
-
+# CONVO.IO
 ## Overview
-
-Brief description of your project goes here.
+This is a chatting and video calling application created using WebRTC and sockets.io in REACTJS
 
 ## Getting Started
 
@@ -59,12 +57,6 @@ To run both the frontend and backend:
 
 The frontend will run on `http://localhost:3000` by default, and the backend on `http://localhost:5000`.
 
-### Project Structure
-
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### Contributing
 
@@ -72,4 +64,4 @@ If you would like to contribute, please fork the repository and use a feature br
 
 ### Contact
 
-For any queries, feel free to reach out at your-email@example.com.
+For any queries, feel free to reach out at adityagautam1911@gmail.com.
