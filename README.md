@@ -42,7 +42,7 @@ MONGO_URI=your_mongo_db_url
 
 JWT_SECRET=your_jwt_secret
 NODE_ENV=production 
-### change it to "development" if not in production
+(change it to "development" if not in production)
 
 
 ### Running the Application
